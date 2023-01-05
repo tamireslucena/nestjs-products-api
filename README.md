@@ -1,73 +1,112 @@
+<!-- PROJECT LOGO -->
+<br />
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <h2 align="center">API Produtos</h2>
+
+  <p align="center">
+    Serviço HTTP para busca de produtos.
+    <br />
+  </p>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Tabela de conteúdos</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-desafio">Sobre o Projeto</a>
+      <ul>
+        <li><a href="#tecnologias-e-recursos">Tecnologias e Recursos</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#instrucoes-gerais">Instruções Gerais</a>
+      <ul>
+        <li><a href="#configuracoes-e-instalacoes">Configurações e Instalações</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#utilizando-a-api">Utilizando a API</a></li>
+      <ul>
+        <li><a href="#swagger">Swagger</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<!-- ABOUT THE PROJECT -->
 
-## Description
+## :notebook_with_decorative_cover: Sobre o Projeto
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### Tecnologias e Recursos
 
-## Installation
+O projeto foi criado usando as tecnologias:
 
-```bash
-$ yarn install
+- [NestJS]
+  A API foi desenvolvida utilizando NestJS.
+
+- [PostgreSQL]
+  Para o banco de dados;
+
+- [Swagger]
+  Para documentar a API;
+
+<!-- GETTING STARTED -->
+
+## :book: Instruções Gerais
+
+A seguir estão as instruções para a instalação, configuração e uso da API do projeto.
+
+### Configurações e Instalações
+
+1. Clonar o repositório
+
+```sh
+  git clone https://github.com/tamireslucena/DesafioTypescript.git
 ```
 
-## Running the app
+1. Entrar na pasta <i>backend</i>
 
-```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+```sh
+  cd backend
 ```
 
-## Test
+2. Instalar dependências
 
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+```sh
+  npm install
 ```
 
-## Support
+3. Subir a aplicação no Docker
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```sh
+  docker-compose up -d
+```
 
-## Stay in touch
+4. Rodar <i>migrations</i>
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```sh
+  npx knex migrate:latest
+```
 
-## License
+5. Rodar <i>seeds</i>
 
-Nest is [MIT licensed](LICENSE).
+```sh
+  npx knex seed:run
+```
+
+6. Rodar API
+
+```sh
+  npm run start
+```
+
+<!-- USAGE EXAMPLES -->
+
+## :electric_plug: Utilizando a API
+
+### Swagger
+
+1. Acesse: <a href="localhost:3333/api/docs">localhost:3333/api/docs</a>;
+
+2. Os endpoints estarão todos liberados;
