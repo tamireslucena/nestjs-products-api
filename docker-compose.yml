@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  nestjs-api-db:
+    image: postgres:latest
+    container_name: nestjs-api-db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: nestjs-api-db
+      POSTGRES_PASSWORD: 'postgres'
